@@ -5,9 +5,6 @@ phases:
     commands:
     # Install Node
     - echo Installing Node...
-    #- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-    #- . ~/.nvm/nvm.sh
-    #- nvm install node
     - curl -sL https://deb.nodesource.com/setup_16.x | bash -
     - apt install -y nodejs
 
@@ -25,11 +22,11 @@ phases:
     commands: 
       # tests
       - echo Testing...
-      - yarn test
+      - yarn test --watchAll=false
       # build
       - echo Building...
       - yarn build
-      #- echo $(ls $CODEBUILD_SRC_DIR)
+      #- echo $CODEBUILD_SRC_DIR
 
 artifacts:
   files:
