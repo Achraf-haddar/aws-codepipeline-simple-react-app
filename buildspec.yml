@@ -26,7 +26,7 @@ phase:
       # build
       - echo Building...
       - yarn build
-      - echo $CODEBUILD_SRC_DIR
+      - echo $(ls $CODEBUILD_SRC_DIR)
 
 artifacts:
   files:
