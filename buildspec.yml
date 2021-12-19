@@ -8,7 +8,7 @@ phases:
     #- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
     #- . ~/.nvm/nvm.sh
     #- nvm install node
-    - curl -sL https://deb.nodesource.com/setup_16.x | -E bash -
+    - curl -sL https://deb.nodesource.com/setup_16.x | bash -
     - apt install -y nodejs
 
     # insta Yarn
