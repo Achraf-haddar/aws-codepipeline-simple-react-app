@@ -5,9 +5,11 @@ phases:
     commands:
     # Install Node
     - echo Installing Node...
-    - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-    - . ~/.nvm/nvm.sh
-    - nvm install node
+    #- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+    #- . ~/.nvm/nvm.sh
+    #- nvm install node
+    - apt install nodejs
+    - apt install npm
     # insta Yarn
     - echo Installing Yarn...
     - npm install --global yarn
@@ -32,4 +34,4 @@ artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: build/*
+  base-directory: build
